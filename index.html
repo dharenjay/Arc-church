@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARC Church</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-100">
+
+<!-- HEADER / NAVIGATION -->
+<header class="bg-transparent text-white fixed w-full z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center space-x-2">
+      <!-- Logo -->
+      <div class="bg-black text-white rounded-full p-2 font-bold text-xl">ARC</div>
+      <span class="font-semibold text-xl">CHURCH</span>
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-[#C5B5A6] transition">Home</a>
+      <a href="#about" class="hover:text-[#C5B5A6] transition">About Us</a>
+      <a href="#ministries" class="hover:text-[#C5B5A6] transition">Ministries</a>
+      <a href="#events" class="hover:text-[#C5B5A6] transition">Events</a>
+      <a href="#contact" class="hover:text-[#C5B5A6] transition">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+      <!-- Search -->
+      <div class="hidden md:flex items-center space-x-2">
+      </div>
+    <!-- HAMBURGER BUTTON -->
+<button onclick="toggleMenu()" class="md:hidden text-2xl z-50 relative">&#9776;</button>
+
+<!-- MOBILE MENU (Slide from Left, Transparent) -->
+<div id="mobile-menu"
+     class="fixed top-0 left-0 h-screen w-64 bg-black/60 backdrop-blur-sm text-white p-6 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40">
+  <a href="#home" class="block py-2 border-b border-white/20">Home</a>
+  <a href="#about" class="block py-2 border-b border-white/20">About Us</a>
+  <a href="#ministries" class="block py-2 border-b border-white/20">Ministries</a>
+  <a href="#events" class="block py-2 border-b border-white/20">Events</a>
+  <a href="#contact" class="block py-2">Contact Us</a>
+</div>
+
+  </header>
+
+
+  <!-- HOME -->
+<section id="home" class="h-screen flex items-center justify-center relative bg-center bg-cover" style="background-image: url('pentecostal.jpg');">
+  <div class="bg-black bg-opacity-60 p-8 rounded text-center text-white" data-aos="zoom-in">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-[#C5B5A6]">
+  "Come as You Are, Leave Transformed"
+</h1>
+<p class="text-lg text-[#C5B5A6]">
+  Welcome to ARC Church
+</p>
+  </div>
+</section>
+  
+
+ <!-- ABOUT US -->
+<section id="about" class="py-16 bg-cover bg-center text-white" style="background-image: url('background.avif');">
+  <div class=py-10"> <!-- Optional overlay for readability -->
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-center mb-10" data-aos="fade-up">
+        <h2 class="text-2xl font-bold border-4 border-[#E8C5A5] px-6 py-2 rounded-lg shadow-md bg-white text-[#D2B48C] inline-block">
+          Our History
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center" data-aos="fade-up">
+        <img src="arc church.jpg" alt="Church History" class="w-full rounded shadow-lg border-4 border-[#E8C5A5]" />
+        <p class="text-lg">
+          ARC Church was founded in 2000 with a vision to build a strong community of believers committed to worship, discipleship, and outreach.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+</section>
+
+
+     <!-- Boxes - Horizontal Layout -->
+<div class="grid md:grid-cols-3 gap-6 mt-12" data-aos="fade-up">
+
+  <!-- Box 1 -->
+  <div class="bg-gray-100 rounded shadow p-4 text-center">
+    <img src="wecometoserve.png" alt="Serving Image" class="w-24 h-24 object-cover rounded-full mx-auto mb-2">
+    <h3 class="font-bold text-xl mb-2">We Come to Serve</h3>
+    <p>Dedicated to serving God and people.</p>
+    <div class="hidden mt-2 text-sm text-gray-700 readmore-text">
+      We are committed to helping others through acts of kindness, compassion, and faith-based service. Our church exists to be the hands and feet of Christ in our community.
+    </div>
+    <button onclick="toggleReadMore(this)" class="mt-2 bg-black text-white px-4 py-1 rounded">Read More</button>
+  </div>
+
+  <!-- Box 2 -->
+  <div class="bg-gray-100 rounded shadow p-4 text-center">
+    <img src="churchmission.png" alt="Serving Image" class="w-24 h-24 object-cover rounded-full mx-auto mb-2">
+    <h3 class="font-bold text-xl mb-2">Church Mission</h3>
+    <p>To make disciples and spread God’s love.</p>
+    <div class="hidden mt-2 text-sm text-gray-700 readmore-text">
+      Our mission is to lead people into a growing relationship with Jesus Christ by teaching, equipping, and sending them to impact the world.
+    </div>
+    <button onclick="toggleReadMore(this)" class="mt-2 bg-black text-white px-4 py-1 rounded">Read More</button>
+  </div>
+
+  <!-- Box 3 -->
+  <div class="bg-gray-100 rounded shadow p-4 text-center">
+    <img src="churchbelief.png" alt="Serving Image" class="w-24 h-24 object-cover rounded-full mx-auto mb-2">
+    <h3 class="font-bold text-xl mb-2">Church Belief</h3>
+    <p>We believe in the Bible and the power of prayer.</p>
+    <div class="hidden mt-2 text-sm text-gray-700 readmore-text">
+      We believe the Bible is the inspired Word of God and that prayer is powerful and effective, connecting us directly to God’s presence and guidance.
+    </div>
+    <button onclick="toggleReadMore(this)" class="mt-2 bg-black text-white px-4 py-1 rounded">Read More</button>
+  </div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- MINISTRIES -->
+<section id="ministries"
+  class="py-16 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('background.avif');">
+  
+  <div class="p-4 rounded-lg"> <!-- Optional overlay (semi-transparent black) -->
+    <div class="max-w-7xl mx-auto px-4 text-white">
+      <div class="flex justify-center mb-10" data-aos="fade-up">
+        <h2 class="text-2xl font-bold border-4 border-[#E8C5A5] px-6 py-2 rounded-lg shadow-md bg-white text-[#D2B48C] inline-block">
+          Our Ministries
+        </h2>
+      </div>
+
+      <!-- Ministries Grid -->
+      <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+        <!-- LM Department -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="lm department.jpg" class="rounded mb-2" alt="Ministry 1" />
+          <h3 class="font-bold">LM Department</h3>
+          <button onclick="openModal('lmModal')" class="text-white mt-2 bg-black px-3 py-1 rounded">Join Ministry</button>
+        </div>
+
+        <!-- Men's Department -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="mens dept.jpg" class="rounded mb-2" alt="Ministry 2" />
+          <h3 class="font-bold">Men's Department</h3>
+          <button onclick="openModal('mensModal')" class="text-white mt-2 bg-black px-3 py-1 rounded">Join Ministry</button>
+        </div>
+
+        <!-- Youth Department -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="youth department.jpg" class="rounded mb-2" alt="Ministry 3" />
+          <h3 class="font-bold">Youth Department</h3>
+          <button onclick="openModal('youthModal')" class="text-white mt-2 bg-black px-3 py-1 rounded">Join Ministry</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LM Modal -->
+<div id="lmModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg w-11/12 md:w-2/3 max-h-[90vh] overflow-y-auto relative shadow-xl">
+    <button onclick="closeModal('lmModal')" class="absolute top-2 right-3 text-black text-2xl font-bold">&times;</button>
+    <h2 class="text-2xl font-bold mb-2">Ladies Ministry</h2>
+    <p class="mb-4 text-gray-700">
+      The Ladies Ministry empowers women to grow in faith and service through fellowship and outreach programs.
+    </p>
+    <img src="ladies-ministry-pic.jpg" alt="Ladies Ministry" class="rounded-lg mb-4 w-full">
+    <p class="text-gray-600">Join us every Saturday for prayer gatherings, Bible studies, and more!</p>
+  </div>
+</div>
+
+<!-- Men's Modal -->
+<div id="mensModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg w-11/12 md:w-2/3 max-h-[90vh] overflow-y-auto relative shadow-xl">
+    <button onclick="closeModal('mensModal')" class="absolute top-2 right-3 text-black text-2xl font-bold">&times;</button>
+    <h2 class="text-2xl font-bold mb-2">Men's Ministry</h2>
+    <p class="mb-4 text-gray-700">
+      Helping men become strong spiritual leaders in their homes and communities.
+    </p>
+    <img src="mens-ministry-pic.jpg" alt="Men's Ministry" class="rounded-lg mb-4 w-full">
+    <p class="text-gray-600">We meet every Thursday night for devotionals and leadership training.</p>
+  </div>
+</div>
+
+<!-- Youth Modal -->
+<div id="youthModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg w-11/12 md:w-2/3 max-h-[90vh] overflow-y-auto relative shadow-xl">
+    <button onclick="closeModal('youthModal')" class="absolute top-2 right-3 text-black text-2xl font-bold">&times;</button>
+    <h2 class="text-2xl font-bold mb-2">Youth Ministry</h2>
+    <p class="mb-4 text-gray-700">
+      Equipping the next generation to grow in Christ through music, fellowship, and discipleship.
+    </p>
+    <img src="youth-ministry-pic.jpg" alt="Youth Ministry" class="rounded-lg mb-4 w-full">
+    <p class="text-gray-600">Youth Night is every Friday! Join us for games, worship, and fun discussions.</p>
+  </div>
+</div>
+
+
+      <!-- LEADERS SECTION WITH BACKGROUND -->
+<section class="py-16 bg-cover bg-center bg-no-repeat" style="background-image: url('background.avif');">
+  <!-- Optional dark overlay for readability -->
+  <div class=" p-6 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 text-white">
+
+      <!-- Title -->
+      <div class="flex justify-center mb-10" data-aos="fade-up">
+        <h2 class="text-2xl font-bold border-4 border-[#D2B48C] px-6 py-2 rounded-lg shadow-md bg-gray-100 text-[#D2B48C] inline-block">
+          Our Pastors and Leaders
+        </h2>
+      </div>
+
+      <!-- Grid of Leaders -->
+      <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+        <!-- Leader 1 -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="pastor.png" class="rounded-full mx-auto mb-2" alt="Leader 1" />
+          <h3 class="font-bold">Pastor Joselito Sumayo</h3>
+          <p>Senior Pastor</p>
+        </div>
+
+        <!-- Leader 2 -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="mens dept leader.png" class="rounded-full mx-auto mb-2" alt="Leader 2" />
+          <h3 class="font-bold">Brother Jerame</h3>
+          <p>Men's Department leader</p>
+        </div>
+
+        <!-- Leader 3 -->
+        <div class="bg-white rounded shadow p-2 text-center text-black">
+          <img src="youth leaders.jpg" class="rounded-full mx-auto mb-2" alt="Leader 3" />
+          <h3 class="font-bold">Sister Rona</h3>
+          <p>Youth Department Leader</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- EVENTS -->
+<section id="events"
+  class="py-16 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('background.avif');">
+  
+  <!-- Optional overlay for readability -->
+  <div class="bg-[#00000080] p-6 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 text-white">
+
+      <!-- Styled Heading -->
+      <div class="flex justify-center mb-10" data-aos="fade-up">
+        <h2 class="text-2xl font-bold border-4 border-[#D2B48C] px-6 py-2 rounded-lg shadow-md bg-gray-100 text-[#D2B48C] inline-block">
+          Upcoming Events
+        </h2>
+      </div>
+
+      <!-- Event Cards -->
+      <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+        <div class="bg-white rounded shadow p-2 text-black">
+          <img src="worship.jpg" class="rounded mb-2" />
+          <h3 class="font-bold text-xl mb-1">Sunday Worship</h3>
+          <p>Join us every Sunday for fellowship and worship service at 9:00 AM.</p>
+        </div>
+        <div class="bg-white rounded shadow p-2 text-black">
+          <img src="prayer walk.jpg" class="rounded mb-2" />
+          <h3 class="font-bold text-xl mb-1">Prayer Walk</h3>
+          <p>A fun-filled evening for the youth every Friday at 6:00 PM.</p>
+        </div>
+        <div class="bg-white rounded shadow p-2 text-black">
+          <img src="prayer fasting.jpg" class="rounded mb-2" />
+          <h3 class="font-bold text-xl mb-1">Prayer Fasting</h3>
+          <p>Weekly prayer meetings every Wednesday at 7:00 PM.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT US -->
+<section id="contact"
+  class="py-16 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('background.avif');">
+
+  <!-- Optional overlay -->
+  <div class="p-6 rounded-lg">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 text-white" data-aos="fade-up">
+
+      <!-- Form -->
+      <form action="https://formsubmit.co/eldharenjay@gmail.com" method="POST"
+        class="space-y-4 bg-white rounded shadow p-6 text-black">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <input type="text" name="Full Name" required placeholder="Full Name" class="w-full p-2 border rounded" />
+        <input type="email" name="Email" required placeholder="Your Email" class="w-full p-2 border rounded" />
+        <input type="text" name="Contact" required placeholder="Contact Number" class="w-full p-2 border rounded" />
+        <input type="text" name="Address" required placeholder="Your Address" class="w-full p-2 border rounded" />
+        <textarea name="Message" required placeholder="Your Message"
+          class="w-full p-2 border rounded h-32"></textarea>
+        <button type="submit" class="w-full bg-yellow-400 py-2 rounded font-bold">Send Message</button>
+      </form>
+
+      <!-- Info -->
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold">Meet Us</h2>
+        <p>Email: eldharenjay@gmail.com</p>
+        <p>Phone: 0912-345-6789</p>
+        <iframe src="https://www.google.com/maps?q=waterfun+sucat+paranaque&output=embed"
+          width="100%" height="300" class="rounded shadow"></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white text-center p-4 mt-8">
+    © 2025 ARC Church | Designed by Eldharenjay
+  </footer>
+
+  <script>
+    AOS.init();
+
+      function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('-translate-x-full');
+
+    }
+
+    function searchSite() {
+      const search = document.getElementById('search').value.toLowerCase();
+      if (search.includes("ministry")) {
+        window.location.href = "#ministries";
+      } else if (search.includes("event")) {
+        window.location.href = "#events";
+      } else if (search.includes("contact")) {
+        window.location.href = "#contact";
+      } else if (search.includes("about")) {
+        window.location.href = "#about";
+      } else {
+        alert("Page not found!");
+      }
+    }
+
+    function toggleReadMore(button) {
+    const text = button.previousElementSibling;
+    if (text.classList.contains("hidden")) {
+      text.classList.remove("hidden");
+      button.textContent = "Read Less";
+    } else {
+      text.classList.add("hidden");
+      button.textContent = "Read More";
+    }
+  }
+
+   const menuButton = document.getElementById('menu-button'); // your hamburger icon
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+    function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+
+  function openModal(id) {
+    document.getElementById(id).classList.remove("hidden");
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add("hidden");
+  }
+  </script>
+
+</body>
+</html>
